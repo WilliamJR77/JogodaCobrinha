@@ -69,9 +69,16 @@ function iniciarJogo()
     if(direction == "left") snakeX -= box; // mover para Esquerda
     if(direction == "up") snakeY -= box // mover para cima
     if (direction == "down") snakeY += box// mover para baixo
-    
-    snake.pop(); // retira o utimo elemento do Array
 
+    /*Faz com que a nossa Cobrinha Cresca ao Comer Cada frutinha*/
+    if(snakeX != food.x || snakeY != food.y){
+        snake.pop(); // retira o utimo elemento do Array
+    }
+    else{
+        food.x = Math.floor(Math.random() * 15 + 1) * box;
+        food.y = Math.floor(Math.random() * 15 + 1) * box;
+    }
+    
     //criando uma nova cabeca da cobrinha com unshift
        
    let newHead = 
