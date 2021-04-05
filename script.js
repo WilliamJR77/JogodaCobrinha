@@ -47,8 +47,7 @@ function update (event)
     if(event.keyCode == 40 && direction != "up") direction = "down"
 }
 
-function iniciarJogo()
-{
+function iniciarJogo(){
     /*tribuir valor a nossa cobrinha para
     ela nao ultrapassar a area definida pelo jogo
     que nos colocamos no nosso cancas que a gente definiu
@@ -57,6 +56,16 @@ function iniciarJogo()
    if(snake[0].x < 0 && direction == "left") snake[0].x = 16 * box;
    if(snake[0].y > 15 * box && direction == "down") snake[0].y = 0;
    if(snake[0].y < 0 && direction == "up") snake[0].y = 16 * box;
+
+/*fazer com que voce perca caso a cobra se comer a si mesma reiniciando o jogo
+do inicio
+*/
+for(i = 1; i < snake.length; i++){
+    if(snake[0].x == snake[i].x && snake[0].y == snake[i].y){
+        clearInterval(jogo);
+        alert('Game Over :(');
+    }
+}
 
     criarBG();
     criarCobrinha();
@@ -72,17 +81,16 @@ function iniciarJogo()
 
     /*Faz com que a nossa Cobrinha Cresca ao Comer Cada frutinha*/
     if(snakeX != food.x || snakeY != food.y){
-        snake.pop(); // retira o utimo elemento do Array
+    
+    // retira o utimo elemento do Array
+        snake.pop(); 
     }
-    else{
-        food.x = Math.floor(Math.random() * 15 + 1) * box;
+    else{food.x = Math.floor(Math.random() * 15 + 1) * box;
         food.y = Math.floor(Math.random() * 15 + 1) * box;
     }
-    
-    //criando uma nova cabeca da cobrinha com unshift
-       
-   let newHead = 
-        {
+
+    //criando uma nova cabeca da cobrinha com unshift  
+   let newHead ={
            x: snakeX,
            y: snakeY
         }
