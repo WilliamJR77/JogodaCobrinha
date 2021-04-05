@@ -10,7 +10,7 @@ header{
     justify-content: center;
     padding-top: 5px;
     padding-bottom: 5px;
-    background-color:#566573;
+    background-color:#0c0d0e;
     color:#F39C12;
 
 }
@@ -24,4 +24,14 @@ header{
 
 .Titulo{
     font-family: 'Times New Roman', Times, serif;
+}
+
+.jogo{
+    height: 95vh;
+    width:95;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/img/back_game.jpg");
 }
