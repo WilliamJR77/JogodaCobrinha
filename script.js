@@ -15,7 +15,7 @@ let food = {
 }
 function criarBG()
 {
-    context.fillStyle = "lightgreen";
+    context.fillStyle = "#F8C471";
     context.fillRect(0, 0,  16 * box, 16 * box);   
 }
 
@@ -28,7 +28,7 @@ function drawFood(){
 
 function criarCobrinha(){
     for(i=0; i < snake.length; i++){
-        context.fillStyle = "green";
+        context.fillStyle = "#138D75";
         context.fillRect(snake[i].x, snake[i].y, box, box);
 
         
