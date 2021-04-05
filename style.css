@@ -35,3 +35,38 @@ header{
     justify-content: center;
     background-image: url("/img/back_game.jpg");
 }
+
+footer{
+    background-color: rgba(0, 0, 0, 0.932);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around
+
+}
+footer .logo-cobra{
+    padding-left: 20px;
+    padding-top: 3px;
+}
+
+footer h3{
+    color:#aaa;
+    
+}
+
+footer h3:hover{
+    color:#fff
+}
+footer nav a{
+    text-decoration: none;
+    padding-right: 10px;
+    color:#aaa;
+}
+
+footer nav a:hover{
+    color:#fff;
+}
+
+canvas{
+    border-radius: 15px;
+}
